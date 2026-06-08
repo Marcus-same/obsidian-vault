@@ -1,0 +1,24 @@
+{
+  "showLineNumber": false,
+  "readableLineLength": true,
+  "defaultViewMode": "source",
+  "livePreview": true,
+  "showFrontmatter": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showIndentGuide": true,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "margin": "0",
+    "landscape": false
+  },
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00-Inbox",
+  "attachmentFolderPath": "99-Meta/Attachments",
+  "userIgnoreFilters": [
+    ".git/",
+    "node_modules/"
+  ],
+  "alwaysUpdateLinks": true,
+  "openBehavior": "daily"
+}
