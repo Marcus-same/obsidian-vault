@@ -1,0 +1,25 @@
+{
+  "globalFilter": "",
+  "removeGlobalFilter": false,
+  "taskMarker": "- [ ]",
+  "setDoneDate": true,
+  "autoSuggestInEditor": true,
+  "autoSuggestMinMatch": 1,
+  "autoSuggestMaxItems": 6,
+  "provideAccessKeys": true,
+  "useFilenameAsScheduledDate": false,
+  "filenameAsDateFolders": [],
+  "recurrenceOnNextLine": true,
+  "statusSettings": {
+    "coreStatuses": [
+      { "symbol": " ", "name": "todo", "nextStatusSymbol": "x", "availableAsCommand": true },
+      { "symbol": "x", "name": "done", "nextStatusSymbol": " ", "availableAsCommand": true },
+      { "symbol": "/", "name": "in progress", "nextStatusSymbol": "x", "availableAsCommand": true },
+      { "symbol": "-", "name": "cancelled", "nextStatusSymbol": " ", "availableAsCommand": true }
+    ],
+    "customStatuses": []
+  },
+  "features": {
+    "INTERNAL_TESTING_ENABLED_BY_DEFAULT": true
+  }
+}
