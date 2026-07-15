@@ -37,5 +37,5 @@
   "smartIndentList": true,
   "vimMode": false,
   "focusNewTab": true,
-  "promptDelete": true
+  "promptDelete": false
 }
