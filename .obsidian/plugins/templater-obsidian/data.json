@@ -12,7 +12,7 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "Daily",
+      "folder": "01-Daily",
       "template": "99-Meta/Templates/每日笔记.md"
     }
   ],

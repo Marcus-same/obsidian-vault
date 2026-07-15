@@ -1,6 +1,54 @@
 {
-  "choices": [],
-  "inputPrompt": "single-line",
+  "choices": [
+    {
+      "id": "capture-daily",
+      "type": "Capture",
+      "name": "⚡ 快速记录到今日笔记",
+      "captureTo": "01-Daily/{{DATE:YYYY-MM-DD}}.md",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": true,
+      "format": {
+        "displayFormat": "- [ ] {{VALUE}}",
+        "prepend": false,
+        "insertAfter": "## 📝 工作记录",
+        "insertAtEnd": false,
+        "task": true
+      },
+      "captureFormat": "- [ ] {{VALUE}}",
+      "createFileTemplate": "---\ndate: {{DATE:YYYY-MM-DD}}\nweek: {{DATE:YYYY-[W]ww}}\ntags: [daily]\n---\n\n# {{DATE:YYYY-MM-DD (dddd)}}\n\n## 📋 今日任务\n- [ ] \n\n## 📝 工作记录\n\n## 🤔 思考 & 复盘\n\n## 📎 随手记"
+    },
+    {
+      "id": "new-interview",
+      "type": "Template",
+      "name": "🎙️ 新建面试记录",
+      "templatePath": "99-Meta/Templates/面试记录.md",
+      "fileNameFormat": "面试-{{VALUE:候选人姓名}}-{{DATE:YYYY-MM-DD}}",
+      "folder": {
+        "enabled": true,
+        "folders": ["02-Interview"],
+        "chooseWhenMakingNote": false
+      },
+      "setFileBehavior": "create",
+      "openFile": true,
+      "focusNewPane": true
+    },
+    {
+      "id": "new-candidate",
+      "type": "Template",
+      "name": "👤 新建候选人跟踪",
+      "templatePath": "99-Meta/Templates/候选人跟踪.md",
+      "fileNameFormat": "{{VALUE:姓名}}-{{VALUE:岗位}}",
+      "folder": {
+        "enabled": true,
+        "folders": ["03-Candidates"],
+        "chooseWhenMakingNote": false
+      },
+      "setFileBehavior": "create",
+      "openFile": true,
+      "focusNewPane": true
+    }
+  ],
+  "inputPrompt": "multi-line",
   "persistInputPromptDrafts": true,
   "useSelectionAsCaptureValue": true,
   "devMode": false,
@@ -10,7 +58,7 @@
   "globalVariables": {},
   "onePageInputEnabled": false,
   "disableOnlineFeatures": true,
-  "enableRibbonIcon": false,
+  "enableRibbonIcon": true,
   "showCaptureNotification": true,
   "showInputCancellationNotification": false,
   "enableTemplatePropertyTypes": false,
@@ -36,63 +84,8 @@
         "endpoint": "https://api.openai.com/v1",
         "apiKey": "",
         "models": [
-          {
-            "name": "gpt-3.5-turbo",
-            "maxTokens": 4096
-          },
-          {
-            "name": "gpt-3.5-turbo-16k",
-            "maxTokens": 16384
-          },
-          {
-            "name": "gpt-3.5-turbo-1106",
-            "maxTokens": 16385
-          },
-          {
-            "name": "gpt-4",
-            "maxTokens": 8192
-          },
-          {
-            "name": "gpt-4-32k",
-            "maxTokens": 32768
-          },
-          {
-            "name": "gpt-4-1106-preview",
-            "maxTokens": 128000
-          },
-          {
-            "name": "gpt-4-turbo",
-            "maxTokens": 128000
-          },
-          {
-            "name": "gpt-4o",
-            "maxTokens": 128000
-          },
-          {
-            "name": "gpt-4o-mini",
-            "maxTokens": 128000
-          }
-        ],
-        "autoSyncModels": false,
-        "modelSource": "modelsDev"
-      },
-      {
-        "name": "Gemini",
-        "endpoint": "https://generativelanguage.googleapis.com",
-        "apiKey": "",
-        "models": [
-          {
-            "name": "gemini-1.5-pro",
-            "maxTokens": 1000000
-          },
-          {
-            "name": "gemini-1.5-flash",
-            "maxTokens": 1000000
-          },
-          {
-            "name": "gemini-1.5-flash-8b",
-            "maxTokens": 1000000
-          }
+          { "name": "gpt-4o", "maxTokens": 128000 },
+          { "name": "gpt-4o-mini", "maxTokens": 128000 }
         ],
         "autoSyncModels": false,
         "modelSource": "modelsDev"

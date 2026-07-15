@@ -1,9 +1,15 @@
 {
   "cssTheme": "",
   "theme": "obsidian",
-  "accentColor": "",
-  "baseFontSize": 16,
-  "interfaceFontFamily": "",
-  "textFontFamily": "",
-  "monospaceFontFamily": ""
+  "accentColor": "#7c3aed",
+  "baseFontSize": 17,
+  "interfaceFontFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+  "textFontFamily": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+  "monospaceFontFamily": "JetBrains Mono, \"Sarasa Mono SC\", \"Cascadia Code\", Fira Code, monospace",
+  "translucency": false,
+  "nativeMenus": true,
+  "showViewHeader": true,
+  "enabledCssSnippets": [
+    "chinese-typography"
+  ]
 }

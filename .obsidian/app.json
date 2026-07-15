@@ -1,24 +1,41 @@
 {
-  "showLineNumber": false,
-  "readableLineLength": true,
+  "zoomLevel": 0,
+  "showLineNumber": true,
+  "readableLineLength": false,
   "defaultViewMode": "source",
   "livePreview": true,
   "showFrontmatter": true,
   "foldHeading": true,
   "foldIndent": true,
   "showIndentGuide": true,
-  "pdfExportSettings": {
-    "pageSize": "A4",
-    "margin": "0",
-    "landscape": false
-  },
+  "spellcheck": false,
+  "strictLineBreaks": false,
+  "showInlineTitle": true,
+  "useMarkdownLinks": false,
+  "newLinkFormat": "shortest",
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "99-Meta/Attachments",
   "newFileLocation": "folder",
   "newFileFolderPath": "00-Inbox",
-  "attachmentFolderPath": "99-Meta/Attachments",
+  "showUnsupportedFiles": true,
   "userIgnoreFilters": [
     ".git/",
-    "node_modules/"
+    "node_modules/",
+    ".obsidian/"
   ],
-  "alwaysUpdateLinks": true,
-  "openBehavior": "daily"
+  "openBehavior": "daily",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "2cm",
+    "downscalePercent": 80
+  },
+  "tabSize": 4,
+  "autoPairBrackets": true,
+  "autoPairMarkdown": true,
+  "smartIndentList": true,
+  "vimMode": false,
+  "focusNewTab": true,
+  "promptDelete": true
 }

@@ -2,6 +2,14 @@
   "dataview",
   "templater-obsidian",
   "quickadd",
+  "calendar",
+  "obsidian-style-settings",
+  "editing-toolbar",
+  "recent-files-obsidian",
+  "tag-wrangler",
+  "better-word-count",
+  "commander",
+  "obsidian-git",
   "smart-connections",
-  "obsidian-git"
+  "obsidian-tasks"
 ]

@@ -1,0 +1,74 @@
+/* === 中文排版优化 === */
+
+/* 正文段落间距 */
+.markdown-reading-view p,
+.markdown-source-view.mod-cm6 .cm-line {
+  line-height: 1.8;
+}
+
+/* 标题间距 */
+.markdown-reading-view h1,
+.markdown-reading-view h2,
+.markdown-reading-view h3,
+.markdown-reading-view h4 {
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+/* 粗体高亮 */
+.markdown-reading-view strong,
+.markdown-source-view.mod-cm6 .cm-strong {
+  color: var(--text-accent);
+}
+
+/* 表格美化 */
+.markdown-reading-view table {
+  margin: 1em auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.markdown-reading-view th {
+  background: var(--background-secondary-alt);
+  padding: 8px 12px;
+}
+
+.markdown-reading-view td {
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/* 图片居中 */
+.markdown-reading-view img {
+  display: block;
+  margin: 1em auto;
+  border-radius: 6px;
+  max-width: 100%;
+}
+
+/* 引用块美化 */
+.markdown-reading-view blockquote {
+  border-left: 4px solid var(--text-accent);
+  background: var(--background-secondary);
+  padding: 8px 16px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* 代码块 */
+.markdown-reading-view code {
+  color: var(--text-accent);
+  background: var(--background-secondary);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* 链接颜色 */
+.markdown-reading-view a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+.markdown-reading-view a:hover {
+  text-decoration: underline;
+}
