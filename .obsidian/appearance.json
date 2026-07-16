@@ -11,6 +11,7 @@
   "showViewHeader": true,
   "enabledCssSnippets": [
     "chinese-typography",
-    "dashboard-cards"
+    "dashboard-cards",
+    "pokeball"
   ]
 }
