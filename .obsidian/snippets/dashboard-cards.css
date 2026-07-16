@@ -1,136 +1,205 @@
 /* ============================================
-   Obsidian 看板样式 —— 卡片式布局 + 视觉优化
+   🏠 工作台 · 仪表盘专属样式
+   作用域：frontmatter 含 cssclasses: dashboard 的页面
    ============================================ */
 
-/* --- 看板页面样式（适用于 🏠 工作台） --- */
-
-/* 页面标题加大 */
-body .markdown-preview-view h1:first-child {
-  font-size: 1.8em;
-  border-bottom: 2px solid var(--color-accent);
-  padding-bottom: 0.3em;
-  margin-bottom: 0.5em;
+/* ===== 全局 ===== */
+.dashboard.markdown-preview-view {
+  padding: 20px 32px 48px;
+  max-width: 880px;
+  margin: 0 auto;
 }
 
-/* Dataview 表格卡片化 */
-.dashboard .dataview.table-view-table,
-.markdown-preview-view:has(h1:first-child) .dataview.table-view-table {
-  border-collapse: separate;
-  border-spacing: 0 4px;
-}
-
-.dashboard .dataview.table-view-table tbody tr,
-.markdown-preview-view:has(h1:first-child) .dataview.table-view-table tbody tr {
-  background: var(--background-primary-alt);
-  border-radius: 8px;
-  transition: transform 0.1s ease;
-}
-
-.dashboard .dataview.table-view-table tbody tr:hover,
-.markdown-preview-view:has(h1:first-child) .dataview.table-view-table tbody tr:hover {
-  transform: translateX(4px);
-  background: var(--background-modifier-hover);
-}
-
-.dashboard .dataview.table-view-table td,
-.markdown-preview-view:has(h1:first-child) .dataview.table-view-table td {
+/* ===== 渐变标题 ===== */
+.dashboard h1:first-child {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 2px 0;
+  padding: 0 0 8px 0;
   border: none;
-  padding: 8px 12px;
+  background: linear-gradient(135deg,
+    var(--text-normal) 0%,
+    var(--text-normal) 45%,
+    color-mix(in srgb, var(--color-accent) 80%, var(--text-normal)) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
 }
 
-/* --- 优先级颜色标识 --- */
-
-/* 表格中优先级列着色 */
-.dataview td:last-child:contains("高"),
-.dataview td:nth-last-child(2):contains("高") {
-  color: var(--color-red);
-  font-weight: bold;
-}
-
-.dataview td:last-child:contains("中"),
-.dataview td:nth-last-child(2):contains("中") {
-  color: var(--color-orange);
-}
-
-.dataview td:last-child:contains("低"),
-.dataview td:nth-last-child(2):contains("低") {
-  color: var(--color-green);
-}
-
-/* 截止日期着色——逾期标红 */
-.dataview td:first-child {
-  font-variant-numeric: tabular-nums;
-}
-
-/* --- 任务列表美化 --- */
-
-/* 未完成任务前加红色指示条 */
-.markdown-preview-view li.task-list-item[data-task=" "] {
-  border-left: 3px solid var(--color-red);
-  padding-left: 8px;
-  margin-left: -11px;
-  background: rgba(255, 0, 0, 0.03);
-  border-radius: 0 4px 4px 0;
-}
-
-/* 已完成任务淡出 */
-.markdown-preview-view li.task-list-item[data-task="x"] {
-  opacity: 0.5;
-}
-
-/* --- 代码块（Dataview 查询）背景 --- */
-
-.markdown-preview-view pre.language-dataview {
-  background: var(--background-primary-alt);
+/* ===== 日期栏（第一条blockquote） ===== */
+.dashboard blockquote:first-of-type {
+  background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
   border-left: 3px solid var(--color-accent);
-  border-radius: 0 6px 6px 0;
-  padding: 6px 12px;
-  font-size: 0.85em;
-  opacity: 0.7;
-}
-
-/* --- 引用块作为信息卡片 --- */
-
-.markdown-preview-view blockquote {
-  border-left: 3px solid var(--color-accent);
-  background: var(--background-primary-alt);
-  padding: 12px 16px;
-  border-radius: 0 8px 8px 0;
-  margin: 1em 0;
-}
-
-/* --- 分隔线美化 --- */
-
-.markdown-preview-view hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(90deg, var(--color-accent), transparent);
-  margin: 2em 0;
-}
-
-/* --- 标题层级加粗 --- */
-
-.markdown-preview-view h2 {
-  font-size: 1.3em;
-  border-bottom: 1px solid var(--background-modifier-border);
-  padding-bottom: 0.2em;
-  margin-top: 1.2em;
-}
-
-.markdown-preview-view h3 {
-  font-size: 1.1em;
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin: 4px 0 24px 0;
+  font-size: 0.92rem;
   color: var(--text-muted);
 }
 
-/* --- 表格响应式（超小屏适配） --- */
-
-.dataview.table-view-table {
-  font-size: 0.9em;
+/* ===== 区域标题（h2） ===== */
+.dashboard h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  margin: 22px 0 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--color-accent) 8%, var(--background-primary-alt));
+  color: var(--text-normal);
+  width: fit-content;
 }
 
-/* --- 待办卡片中的链接样式 --- */
+/* ===== 分隔线 ===== */
+.dashboard hr {
+  margin: 24px 0 10px;
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg,
+    color-mix(in srgb, var(--color-accent) 30%, transparent) 0%,
+    transparent 80%
+  );
+}
 
-.task-list-item a {
+/* ===== Dataview 表格 ===== */
+.dashboard .dataview.table-view-table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  width: 100%;
+  font-size: 0.92rem;
+}
+
+/* 隐藏表头 */
+.dashboard .dataview.table-view-table thead {
+  display: none;
+}
+
+/* 行 = 卡片 */
+.dashboard .dataview.table-view-table tbody tr {
+  background: var(--background-primary-alt);
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  border: 1px solid color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 左侧优先级色条 */
+.dashboard .dataview.table-view-table tbody tr::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-accent);
+  border-radius: 3px 0 0 3px;
+}
+
+.dashboard .dataview.table-view-table tbody tr:hover {
+  transform: translateX(4px);
+  border-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+/* 单元格 */
+.dashboard .dataview.table-view-table td {
+  border: none;
+  padding: 9px 14px;
+  vertical-align: middle;
+}
+
+/* 第一列（名称） */
+.dashboard .dataview.table-view-table td:first-child {
+  font-weight: 500;
+  width: 45%;
+}
+
+.dashboard .dataview.table-view-table td:first-child a {
   text-decoration: none;
-  border-bottom: 1px dashed var(--color-accent);
+  border-bottom: 1px dotted color-mix(in srgb, var(--color-accent) 30%, transparent);
+  transition: border-color 0.15s;
+}
+
+.dashboard .dataview.table-view-table td:first-child a:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+/* 日期列 */
+.dashboard .dataview.table-view-table td:nth-child(2) {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  text-align: center;
+  width: 20%;
+}
+
+/* 最后一列（状态/优先级）
+   用 emoji 表达优先级，样式统一简洁 */
+.dashboard .dataview.table-view-table td:last-child {
+  text-align: right;
+  width: 18%;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}
+
+/* ===== 收件箱 / Wiki 列表（LIST 视图） ===== */
+.dashboard .dataview.list-view {
+  background: var(--background-primary-alt);
+  border-radius: 10px;
+  padding: 6px 16px;
+  border: 1px solid color-mix(in srgb, var(--background-modifier-border) 50%, transparent);
+}
+
+.dashboard .dataview.list-view .list-item {
+  padding: 6px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--background-modifier-border) 30%, transparent);
+}
+
+.dashboard .dataview.list-view .list-item:last-child {
+  border-bottom: none;
+}
+
+.dashboard .dataview.list-view .list-item a {
+  text-decoration: none;
+}
+
+/* ===== 快捷操作区 ===== */
+.dashboard h2:last-of-type ~ ul {
+  background: var(--background-primary-alt);
+  border-radius: 10px;
+  padding: 12px 20px;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 15%, transparent);
+}
+
+.dashboard h2:last-of-type ~ ul li {
+  padding: 5px 0;
+  list-style: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.dashboard h2:last-of-type ~ ul li::before {
+  content: '→ ';
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ===== 移动端 ===== */
+@media (max-width: 600px) {
+  .dashboard.markdown-preview-view {
+    padding: 12px 16px;
+  }
+  .dashboard h1:first-child {
+    font-size: 1.5rem;
+  }
+  .dashboard .dataview.table-view-table td {
+    padding: 7px 10px;
+    font-size: 0.82rem;
+  }
 }
