@@ -1,0 +1,25 @@
+# 每日简报 - 自动化工作流
+# 用法：告诉我"今天简报"或"早上好"
+#
+# 执行步骤：
+# 1. 检查今天的日期
+# 2. 扫描 20-Actions 中今天到期和已逾期的行动卡
+# 3. 扫描 00-Inbox 未处理的素材
+# 4. 生成一份今日简报
+
+steps:
+  - name: 收集今天到期的行动卡
+    action: scan_actions
+    query: deadline = today OR deadline < today
+
+  - name: 收集收件箱未处理
+    action: scan_inbox
+    since: 7 days
+
+  - name: 检查日记是否有昨日复盘
+    action: check_daily
+    date: yesterday
+
+  - name: 生成简报
+    action: summarize
+    format: markdown

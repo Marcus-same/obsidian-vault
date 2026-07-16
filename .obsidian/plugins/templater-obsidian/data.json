@@ -33,7 +33,11 @@
   "enabled_templates_hotkeys": [
     "99-Meta/Scripts/task-sort.js",
     "99-Meta/Scripts/process-inbox.js",
-    "99-Meta/Scripts/create-action.js"
+    "99-Meta/Scripts/create-action.js",
+    "99-Meta/Scripts/quick-capture.js",
+    "99-Meta/Scripts/candidate-followup.js"
   ],
-  "startup_templates": []
+  "startup_templates": [
+    "99-Meta/Scripts/startup-check.js"
+  ]
 }

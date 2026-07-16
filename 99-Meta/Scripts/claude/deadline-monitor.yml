@@ -1,0 +1,24 @@
+# 截止日期监控
+# 用法："检查待办"、"哪些快到期了"
+#
+# 检查项：
+# 1. 今天到期的行动卡（标红提示）
+# 2. 3天内即将到期的行动卡（预警）
+# 3. 已逾期的行动卡（紧急）
+
+steps:
+  - name: 扫描 20-Actions 所有未完成
+    action: scan_actions
+    filter: status != 已完成
+
+  - name: 按截止日期分类
+    action: classify
+    rules:
+      - overdue: deadline < today
+      - due_today: deadline = today
+      - approaching: deadline <= today+3 AND deadline > today
+      - safe: deadline > today+3 OR 无截止日期
+
+  - name: 生成报告
+    action: report
+    format: sorted_by_urgency

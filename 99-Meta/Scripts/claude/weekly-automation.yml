@@ -1,0 +1,37 @@
+# 周回顾自动化
+# 用法："做周回顾"
+#
+# 自动完成：
+# 1. 计算当前周数
+# 2. 收集本周日记中的完成事项
+# 3. 收集未完成的跨周待办
+# 4. 检查 20-Actions 本周状态
+# 5. 收集本周新增的 Wiki 和收件箱
+# 6. 生成周回顾笔记到 30-Weekly/
+
+steps:
+  - name: 计算周数
+    action: calc_week
+
+  - name: 从日记提取本周完成
+    action: extract_completed
+    sources: [01-Daily]
+    date_range: this_week
+
+  - name: 从日记提取未完成任务
+    action: extract_pending
+    sources: [01-Daily]
+    date_range: this_week
+
+  - name: 收集 20-Actions 状态
+    action: scan_actions
+    date_range: this_week
+
+  - name: 收集收件箱本周变化
+    action: scan_inbox
+    date_range: this_week
+
+  - name: 生成周回顾笔记
+    action: create_note
+    target: 30-Weekly/
+    template: 周回顾
