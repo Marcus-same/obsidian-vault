@@ -10,6 +10,7 @@
   "nativeMenus": true,
   "showViewHeader": true,
   "enabledCssSnippets": [
-    "chinese-typography"
+    "chinese-typography",
+    "dashboard-cards"
   ]
 }

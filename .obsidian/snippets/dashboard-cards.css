@@ -1,0 +1,136 @@
+/* ============================================
+   Obsidian 看板样式 —— 卡片式布局 + 视觉优化
+   ============================================ */
+
+/* --- 看板页面样式（适用于 🏠 工作台） --- */
+
+/* 页面标题加大 */
+body .markdown-preview-view h1:first-child {
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+/* Dataview 表格卡片化 */
+.dashboard .dataview.table-view-table,
+.markdown-preview-view:has(h1:first-child) .dataview.table-view-table {
+  border-collapse: separate;
+  border-spacing: 0 4px;
+}
+
+.dashboard .dataview.table-view-table tbody tr,
+.markdown-preview-view:has(h1:first-child) .dataview.table-view-table tbody tr {
+  background: var(--background-primary-alt);
+  border-radius: 8px;
+  transition: transform 0.1s ease;
+}
+
+.dashboard .dataview.table-view-table tbody tr:hover,
+.markdown-preview-view:has(h1:first-child) .dataview.table-view-table tbody tr:hover {
+  transform: translateX(4px);
+  background: var(--background-modifier-hover);
+}
+
+.dashboard .dataview.table-view-table td,
+.markdown-preview-view:has(h1:first-child) .dataview.table-view-table td {
+  border: none;
+  padding: 8px 12px;
+}
+
+/* --- 优先级颜色标识 --- */
+
+/* 表格中优先级列着色 */
+.dataview td:last-child:contains("高"),
+.dataview td:nth-last-child(2):contains("高") {
+  color: var(--color-red);
+  font-weight: bold;
+}
+
+.dataview td:last-child:contains("中"),
+.dataview td:nth-last-child(2):contains("中") {
+  color: var(--color-orange);
+}
+
+.dataview td:last-child:contains("低"),
+.dataview td:nth-last-child(2):contains("低") {
+  color: var(--color-green);
+}
+
+/* 截止日期着色——逾期标红 */
+.dataview td:first-child {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- 任务列表美化 --- */
+
+/* 未完成任务前加红色指示条 */
+.markdown-preview-view li.task-list-item[data-task=" "] {
+  border-left: 3px solid var(--color-red);
+  padding-left: 8px;
+  margin-left: -11px;
+  background: rgba(255, 0, 0, 0.03);
+  border-radius: 0 4px 4px 0;
+}
+
+/* 已完成任务淡出 */
+.markdown-preview-view li.task-list-item[data-task="x"] {
+  opacity: 0.5;
+}
+
+/* --- 代码块（Dataview 查询）背景 --- */
+
+.markdown-preview-view pre.language-dataview {
+  background: var(--background-primary-alt);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 6px 6px 0;
+  padding: 6px 12px;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+/* --- 引用块作为信息卡片 --- */
+
+.markdown-preview-view blockquote {
+  border-left: 3px solid var(--color-accent);
+  background: var(--background-primary-alt);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  margin: 1em 0;
+}
+
+/* --- 分隔线美化 --- */
+
+.markdown-preview-view hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-accent), transparent);
+  margin: 2em 0;
+}
+
+/* --- 标题层级加粗 --- */
+
+.markdown-preview-view h2 {
+  font-size: 1.3em;
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 0.2em;
+  margin-top: 1.2em;
+}
+
+.markdown-preview-view h3 {
+  font-size: 1.1em;
+  color: var(--text-muted);
+}
+
+/* --- 表格响应式（超小屏适配） --- */
+
+.dataview.table-view-table {
+  font-size: 0.9em;
+}
+
+/* --- 待办卡片中的链接样式 --- */
+
+.task-list-item a {
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color-accent);
+}
