@@ -1,0 +1,17 @@
+{
+  "workspaceMode": "obsidian",
+  "vaultRoot": "D:/obsidian-vault",
+  "topicDir": "20-Actions",
+  "inboxDir": "00-Inbox",
+  "archiveDir": "04-Archive",
+  "wikiMode": "on",
+  "wikiDir": "10-Wiki",
+  "wikiIndexPath": "10-Wiki/index.md",
+  "wikiLogPath": "10-Wiki/log.md",
+  "dailyCapacity": 3,
+  "calendarProvider": "none",
+  "scheduleTimeSlots": [
+    { "label": "上午", "start": "09:00", "end": "12:00" },
+    { "label": "下午", "start": "14:00", "end": "18:00" }
+  ]
+}

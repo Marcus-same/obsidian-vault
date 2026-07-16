@@ -1,13 +1,23 @@
 ---
-title: "梳理IT介绍"
 type: action
-date: 2026-07-16
-deadline: 2026-07-23
-priority: 中
+title: "梳理IT介绍"
+topic_id:
 status: 待行动
+stage: 待排期
+priority: 中
+created: 2026-07-16
+updated: 2026-07-16
+deadline: 2026-07-23
+scheduled_date: 2026-07-23
+scheduled_start:
+scheduled_end:
 source: 周回顾 - W29
 source_type: weekly
 area: HR
+tags: []
+dedupe_key:
+drop_action:
+drop_reason:
 ---
 
 # 梳理 IT 介绍

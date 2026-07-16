@@ -68,15 +68,25 @@ async function createAction(tp) {
 
     // 生成行动卡内容
     let actionContent = `---
-title: "${fileName}"
 type: action
-date: ${tp.date.now("YYYY-MM-DD")}
-deadline: ${suggestedDeadline}
-priority: ${suggestedPriority}
+title: "${fileName}"
+topic_id:
 status: 待行动
+stage: 待排期
+priority: ${suggestedPriority}
+created: ${tp.date.now("YYYY-MM-DD")}
+updated: ${tp.date.now("YYYY-MM-DD")}
+deadline: ${suggestedDeadline}
+scheduled_date: ${suggestedDeadline}
+scheduled_start:
+scheduled_end:
 source: ${fileName}
 source_type: wiki
 area: ${suggestedArea}
+tags: []
+dedupe_key:
+drop_action:
+drop_reason:
 ---
 
 # ${fileName}

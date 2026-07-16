@@ -1,0 +1,27 @@
+# AI 相似内容合并
+# 用法：说"合并收件箱重复内容"或"检查相似卡片"
+#
+# 流程：
+# 1. 扫描 00-Inbox 和 10-Wiki 的所有条目
+# 2. 基于文件名、标签、内容关键词判断相似度
+# 3. 列出疑似重复/相似的成对条目，给出建议
+# 4. 确认后执行合并（保留内容最丰富的版本，补充来源引用）
+
+steps:
+  - name: 扫描所有条目
+    action: scan_all
+    sources: [00-Inbox, 10-Wiki, 20-Actions]
+
+  - name: 按主题聚类
+    action: cluster_by_similarity
+    method: name_and_tag_comparison
+
+  - name: 列出候选合并对
+    action: list_merge_candidates
+    format: table
+    columns: [组, 条目1, 条目2, 相似度, 建议]
+
+  - name: 执行合并
+    action: merge
+    strategy: 保留内容丰富者，删除/标记重复者
+    log: true

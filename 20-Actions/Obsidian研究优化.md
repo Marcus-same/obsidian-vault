@@ -1,13 +1,23 @@
 ---
-title: "Obsidian研究&优化"
 type: action
-date: 2026-07-16
-deadline: 2026-07-23
-priority: 中
+title: "Obsidian研究&优化"
+topic_id:
 status: 进行中
+stage: 待排期
+priority: 中
+created: 2026-07-16
+updated: 2026-07-16
+deadline: 2026-07-23
+scheduled_date: 2026-07-23
+scheduled_start:
+scheduled_end:
 source: 周回顾 - W29
 source_type: weekly
 area: 技术工具
+tags: []
+dedupe_key:
+drop_action:
+drop_reason:
 ---
 
 # Obsidian 研究 & 优化
