@@ -21,16 +21,16 @@ date: 2026-07-16
 ```
 📥 00-Inbox/          ← 收件箱：碎片素材、临时想法
 📝 01-Daily/          ← 日记（自动生成）
-📁 01-Projects/       ← 有截止时间的项目
-🗺️ 02-Areas/          ← 持续关注的领域
+📁 60-Projects/       ← 有截止时间的项目
+🗺️ 45-Areas/          ← 持续关注的领域
       ├── HR/          ← 👈 你的主战场
       ├── 个人成长/
       └── 技术工具/
-🎙️ 02-Interview/      ← 面试记录
-👤 03-Candidates/     ← 候选人档案
-📚 03-Resources/      ← 系统学习资源
-🗄️ 04-Archive/        ← 归档
-💡 05-Zettelkasten/   ← 永久笔记
+🎙️ 40-Interview/      ← 面试记录
+👤 41-Candidates/     ← 候选人档案
+📚 50-Resources/      ← 系统学习资源
+🗄️ 88-Archive/        ← 归档
+💡 55-Zettelkasten/   ← 永久笔记
 🧠 10-Wiki/           ← 🆕 知识中间层
 ⏳ 20-Actions/        ← 🆕 行动卡
 📅 30-Weekly/         ← 🆕 周回顾

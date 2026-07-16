@@ -13,6 +13,6 @@ type: area
 
 ```dataview
 LIST
-FROM "02-Areas/个人成长"
+FROM "45-Areas/个人成长"
 WHERE file.name != "README"
 ```

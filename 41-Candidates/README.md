@@ -1,5 +1,5 @@
 ---
-title: 03-Candidates 说明
+title: 41-Candidates 说明
 type: meta
 ---
 
@@ -20,11 +20,11 @@ type: meta
 - 📄 已发 Offer
 
 ## 关联
-- 面试记录 → `02-Interview/`
+- 面试记录 → `40-Interview/`
 - 跟进任务 → `20-Actions/`
 
 ```dataview
 TABLE file.frontmatter.status as 状态, file.frontmatter.position as 岗位
-FROM "03-Candidates"
+FROM "41-Candidates"
 SORT file.ctime DESC
 ```

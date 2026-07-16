@@ -25,7 +25,7 @@
       "fileNameFormat": "面试-{{VALUE:候选人姓名}}-{{DATE:YYYY-MM-DD}}",
       "folder": {
         "enabled": true,
-        "folders": ["02-Interview"],
+        "folders": ["40-Interview"],
         "chooseWhenMakingNote": false
       },
       "setFileBehavior": "create",
@@ -40,7 +40,7 @@
       "fileNameFormat": "{{VALUE:姓名}}-{{VALUE:岗位}}",
       "folder": {
         "enabled": true,
-        "folders": ["03-Candidates"],
+        "folders": ["41-Candidates"],
         "chooseWhenMakingNote": false
       },
       "setFileBehavior": "create",

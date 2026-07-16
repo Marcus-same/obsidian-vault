@@ -1,5 +1,5 @@
 ---
-title: 01-Projects 说明
+title: 60-Projects 说明
 type: meta
 ---
 
@@ -26,7 +26,7 @@ type: meta
 
 ```dataview
 LIST
-FROM "01-Projects"
+FROM "60-Projects"
 WHERE file.name != "README"
 SORT file.ctime DESC
 ```

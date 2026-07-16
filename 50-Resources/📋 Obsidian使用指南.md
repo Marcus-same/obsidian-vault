@@ -84,7 +84,7 @@ date: 2026-06-08
    FROM ""
    WHERE importance = "⭐⭐⭐" AND status = "草稿"
    \`\`\`
-2. 归档：过期的项目笔记 → `04-Archive/`
+2. 归档：过期的项目笔记 → `88-Archive/`
 3. 更新首页 `🏠 知识库总索引.md`
 
 ---
@@ -115,7 +115,7 @@ date: 2026-06-08
 ```
 \`\`\`dataview
 LIST
-FROM "02-Areas/HR/招聘面试"
+FROM "45-Areas/HR/招聘面试"
 SORT date DESC
 \`\`\`
 ```
@@ -182,8 +182,8 @@ QuickAdd 配置后可以一步到位（Ctrl+Shift+Q 直接弹出选模板）。
 
 **Q: 知识卡片和永久笔记的区别？**
 
-知识卡片（02-Areas）：完整的主题笔记，可以很长，有上下文。
-永久笔记（05-Zettelkasten/Permanent）：提炼后的原子化观点，一个笔记只讲一件事。
+知识卡片（45-Areas）：完整的主题笔记，可以很长，有上下文。
+永久笔记（55-Zettelkasten/Permanent）：提炼后的原子化观点，一个笔记只讲一件事。
 
 **Q: 要不要用日期做文件名？**
 

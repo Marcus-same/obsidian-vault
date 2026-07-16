@@ -10,8 +10,8 @@ async function candidateFollowup(tp) {
         return;
     }
 
-    if (!activeFile.path.startsWith("03-Candidates")) {
-        new Notice("⚠️ 请在 03-Candidates 中打开一个文件");
+    if (!activeFile.path.startsWith("41-Candidates")) {
+        new Notice("⚠️ 请在 41-Candidates 中打开一个文件");
         return;
     }
 

@@ -13,6 +13,6 @@ type: area
 
 ```dataview
 LIST
-FROM "02-Areas/技术工具"
+FROM "45-Areas/技术工具"
 WHERE file.name != "README"
 ```

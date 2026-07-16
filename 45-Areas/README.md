@@ -1,5 +1,5 @@
 ---
-title: 02-Areas 说明
+title: 45-Areas 说明
 type: meta
 ---
 
@@ -13,13 +13,13 @@ type: meta
 
 ## 当前领域
 
-- [[02-Areas/HR/README|HR 领域]] — 招聘、培训、HRBP
-- [[02-Areas/个人成长/README|个人成长]] — 学习、技能提升
-- [[02-Areas/技术工具/README|技术工具]] — 效率工具、AI
+- [[45-Areas/HR/README|HR 领域]] — 招聘、培训、HRBP
+- [[45-Areas/个人成长/README|个人成长]] — 学习、技能提升
+- [[45-Areas/技术工具/README|技术工具]] — 效率工具、AI
 
 ```dataview
 LIST
-FROM "02-Areas"
+FROM "45-Areas"
 WHERE file.name != "README"
 SORT file.name ASC
 ```

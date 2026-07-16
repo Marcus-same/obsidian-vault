@@ -1,5 +1,5 @@
 ---
-title: 02-Interview 说明
+title: 40-Interview 说明
 type: meta
 ---
 
@@ -12,12 +12,12 @@ type: meta
 使用模板 `面试记录` 创建。
 
 ## 关联
-- 候选人档案 → `03-Candidates/`
+- 候选人档案 → `41-Candidates/`
 - 面试题库 → `10-Wiki/`
 - 面试安排 → `20-Actions/`
 
 ```dataview
 TABLE date as 面试日期, file.frontmatter.candidate as 候选人
-FROM "02-Interview"
+FROM "40-Interview"
 SORT date DESC
 ```

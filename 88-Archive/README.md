@@ -1,5 +1,5 @@
 ---
-title: 04-Archive 说明
+title: 88-Archive 说明
 type: meta
 ---
 
@@ -12,7 +12,7 @@ type: meta
 
 ```dataview
 LIST
-FROM "04-Archive"
+FROM "88-Archive"
 WHERE file.name != "README"
 SORT file.ctime DESC
 ```
