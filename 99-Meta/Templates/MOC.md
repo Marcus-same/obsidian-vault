@@ -1,10 +1,10 @@
 ---
-title: 
+title: "<% tp.file.title %>"
 tags: [MOC]
-date: "{{date}}"
+date: <% tp.date.now("YYYY-MM-DD") %>
 ---
 
-# 📋 {{title}}
+# 📋 <% tp.file.title %>
 
 ## 核心概念
 

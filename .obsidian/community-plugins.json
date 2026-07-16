@@ -10,5 +10,6 @@
   "commander",
   "obsidian-git",
   "smart-connections",
-  "obsidian-tasks-plugin"
+  "obsidian-tasks-plugin",
+  "templater-obsidian"
 ]

@@ -21,7 +21,7 @@
   "file-recovery": true,
   "properties": true,
   "bases": true,
-  "markdown-importer": false,
+  "markdown-importer": true,
   "zk-prefixer": false,
   "random-note": false,
   "slides": false,

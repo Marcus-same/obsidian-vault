@@ -3,11 +3,11 @@
 ## 库结构
 
 ```
-00-Inbox/     ← 收件箱：碎片素材、临时想法
-01-Daily/     ← 日记（自动生成）
-10-Wiki/      ← 知识库（按主题建子目录，合并原50-Resources和55-Zettelkasten）
+00-Inbox/     ← 收件箱：碎片素材、临时想法（注意：工作台和排期不在这里）
+01-Daily/     ← 日记（自动生成，Templater 自动套用每日笔记模板）
+10-Wiki/      ← 知识库（按主题建子目录，Templater 自动套用 Wiki条目模板）
 15-MOC/       ← 内容地图索引（每主题一条MOC，链接10-Wiki对应笔记）
-20-Actions/   ← 行动卡（可执行任务）
+20-Actions/   ← 行动卡（Templater 自动套用行动卡模板）
 30-Weekly/    ← 周回顾
 40-Interview/ ← 面试记录
 41-Candidates/← 候选人档案
@@ -20,7 +20,7 @@
 99-Meta/      ← 模板、脚本、附件
 ```
 
-> 注：50-Resources 和 55-Zettelkasten 已合并至 10-Wiki，旧目录保留标注不删除。
+> 注：50-Resources 和 55-Zettelkasten 已合并至 10-Wiki，目录已清理。
 
 ## 🚀 自动化命令（对 Claude Code 说）
 
@@ -80,14 +80,11 @@
 
 ## 🔧 Obsidian 内快捷键
 
-在 Obsidian 中按 `Ctrl+P`，搜索以下命令：
-
-| 命令 | 在什么文件上运行 | 作用 |
-|------|-----------------|------|
-| Templater: Quick capture | 任意位置 | 弹窗快速创建收件箱条目 |
-| Templater: Process inbox | 收件箱文件 | 整理成 Wiki |
-| Templater: Create action | Wiki/任意笔记 | 从内容生成行动卡 |
-| Templater: Candidate followup | 候选人档案 | 根据状态生成跟进行动卡 |
+| 快捷键 | 命令 | 作用 |
+|--------|------|------|
+| `Ctrl+Shift+T` | Templater: Insert template | 插入模板到当前笔记 |
+| `Ctrl+Alt+N` | Templater: Create new note from template | 从模板创建新笔记 |
+| `Ctrl+P` 搜"Templater" | 查看所有 Templater 命令 |
 
 ## 📝 模板（新建文件时自动套用）
 

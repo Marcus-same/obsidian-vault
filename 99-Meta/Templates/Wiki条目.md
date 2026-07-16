@@ -1,7 +1,7 @@
 ---
-title: "{{title}}"
+title: "<% tp.file.title %>"
 type: wiki
-date: {{date}}
+date: <% tp.date.now("YYYY-MM-DD") %>
 source: 
 source_path: 
 status: 待整理
@@ -9,22 +9,9 @@ tags: [wiki]
 importance: ⭐⭐
 ---
 
-# {{title}}
+# <% tp.file.title %>
 
 ## 一句话总结
-
-<!-- 50字内概括这条知识的核心 -->
-
-## 整理自
-
-<!-- 链接回原始素材，保留来源路径 -->
-
-```dataview
-LIST
-FROM "00-Inbox"
-WHERE contains(file.name, "{{title}}")
-SORT file.ctime DESC
-```
 
 ## 核心内容
 
@@ -39,7 +26,7 @@ SORT file.ctime DESC
 ```dataview
 TASK
 FROM "20-Actions"
-WHERE contains(source, "{{title}}")
+WHERE contains(source, this.file.name)
 ```
 
 ## 关联 Wiki
