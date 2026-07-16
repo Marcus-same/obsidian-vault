@@ -5,20 +5,22 @@
 ```
 00-Inbox/     ← 收件箱：碎片素材、临时想法
 01-Daily/     ← 日记（自动生成）
-10-Wiki/      ← 知识中间层（加工整理后的）
+10-Wiki/      ← 知识库（按主题建子目录，合并原50-Resources和55-Zettelkasten）
+15-MOC/       ← 内容地图索引（每主题一条MOC，链接10-Wiki对应笔记）
 20-Actions/   ← 行动卡（可执行任务）
 30-Weekly/    ← 周回顾
-60-Projects/  ← 有截止时间的项目
+40-Interview/ ← 面试记录
+41-Candidates/← 候选人档案
 45-Areas/     ← 持续关注的领域
   ├── HR/
   ├── 个人成长/
   └── 技术工具/
-40-Interview/ ← 面试记录
-41-Candidates/← 候选人档案
+60-Projects/  ← 项目（YAML status标记状态，📊项目看板.md自动汇总）
 88-Archive/   ← 归档
-55-Zettelkasten/ ← 永久笔记
 99-Meta/      ← 模板、脚本、附件
 ```
+
+> 注：50-Resources 和 55-Zettelkasten 已合并至 10-Wiki，旧目录保留标注不删除。
 
 ## 🚀 自动化命令（对 Claude Code 说）
 
@@ -101,9 +103,13 @@
 ```
 收件箱素材            → 00-Inbox/
   ↓ 整理
-面试题库/招聘SOP/培训方案 → 10-Wiki/
+面试题库/招聘SOP/培训方案 → 10-Wiki/（知识库按主题建子目录）
+  ↓ 索引
+15-MOC/              → 主题索引页，链接 10-Wiki 下所有相关笔记
   ↓ 提炼
 安排面试/发Offer/跟进   → 20-Actions/
+  ↓ 管理
+60-Projects/📊 项目看板  → Dataview 自动汇总项目状态
   ↓ 复盘
 周回顾/招聘进度盘点     → 30-Weekly/
 ```
