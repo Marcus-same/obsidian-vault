@@ -1,7 +1,7 @@
 ---
-title: "<% tp.file.title %>"
+title: "{{title}}"
 type: wiki
-date: <% tp.date.now("YYYY-MM-DD") %>
+date: {{date}}
 source: 
 source_path: 
 status: 待整理
@@ -9,7 +9,7 @@ tags: [wiki]
 importance: ⭐⭐
 ---
 
-# <% tp.file.title %>
+# {{title}}
 
 ## 一句话总结
 
@@ -22,7 +22,7 @@ importance: ⭐⭐
 ```dataview
 LIST
 FROM "00-Inbox"
-WHERE contains(file.name, "<% tp.file.title %>")
+WHERE contains(file.name, "{{title}}")
 SORT file.ctime DESC
 ```
 
@@ -39,7 +39,7 @@ SORT file.ctime DESC
 ```dataview
 TASK
 FROM "20-Actions"
-WHERE contains(source, "<% tp.file.title %>")
+WHERE contains(source, "{{title}}")
 ```
 
 ## 关联 Wiki
