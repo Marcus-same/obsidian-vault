@@ -84,7 +84,13 @@
 |--------|------|------|
 | `Ctrl+Shift+T` | Templater: Insert template | 插入模板到当前笔记 |
 | `Ctrl+Alt+N` | Templater: Create new note from template | 从模板创建新笔记 |
-| `Ctrl+P` 搜"Templater" | 查看所有 Templater 命令 |
+| `Ctrl+Shift+S` | Templater: Sync actions | 同步今日任务勾选状态到 20-Actions |
+
+### 每日任务 → 行动卡同步
+
+在今日任务里写 `- [ ] [[20-Actions/文件名|显示名]]`，打勾后按 **Ctrl+Shift+S**：
+- 已勾选的任务 → 对应行动卡 `status` 改为"已完成"
+- 未勾选的任务 → 如果行动卡没有 `deadline`，自动设为今天
 
 ## 📝 模板（新建文件时自动套用）
 
