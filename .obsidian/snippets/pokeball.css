@@ -1,0 +1,100 @@
+/* 🏠 工作台 - 宝可梦精灵球风格 */
+/* 使用方法：在 Obsidian 设置 → 外观 → CSS 片段中启用 */
+
+/* 只在首页生效 */
+.dashboard a.internal-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none !important;
+  padding: 10px 16px;
+  margin: 6px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  width: 120px;
+  text-align: center;
+  overflow: hidden;
+  border: 2.5px solid;
+  transition: transform 0.15s;
+}
+
+.dashboard a.internal-link:hover {
+  transform: scale(1.08);
+}
+
+/* 红球 - 今日待办 */
+.dashboard a.internal-link[href*="20-Actions"] {
+  background: linear-gradient(180deg, #E24B4A 0%, #E24B4A 48%, #fff 48%, #fff 52%, #fff 100%);
+  color: #fff;
+  border-color: #791F1F;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* 蓝球 - 每日日记 */
+.dashboard a.internal-link[href*="01-Daily"] {
+  background: linear-gradient(180deg, #185FA5 0%, #185FA5 48%, #fff 48%, #fff 52%, #fff 100%);
+  color: #fff;
+  border-color: #0C447C;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* 绿球 - 本周排期 */
+.dashboard a.internal-link[href*="排期"] {
+  background: linear-gradient(180deg, #639922 0%, #639922 48%, #fff 48%, #fff 52%, #fff 100%);
+  color: #fff;
+  border-color: #27500A;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* 紫球 - 知识库 */
+.dashboard a.internal-link[href*="10-Wiki"] {
+  background: linear-gradient(180deg, #7F77DD 0%, #7F77DD 48%, #fff 48%, #fff 52%, #fff 100%);
+  color: #fff;
+  border-color: #3C3489;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* 橙球 - 项目 */
+.dashboard a.internal-link[href*="60-Projects"] {
+  background: linear-gradient(180deg, #D85A30 0%, #D85A30 48%, #fff 48%, #fff 52%, #fff 100%);
+  color: #fff;
+  border-color: #712B13;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* 灰球 - 收件箱 */
+.dashboard a.internal-link[href*="Inbox"i] {
+  background: linear-gradient(180deg, #5F5E5A 0%, #5F5E5A 48%, #fff 48%, #fff 52%, #fff 100%);
+  color: #fff;
+  border-color: #2C2C2A;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* 浅蓝球 - MOC */
+.dashboard a.internal-link[href*="15-MOC"] {
+  background: linear-gradient(180deg, #378ADD 0%, #378ADD 48%, #fff 48%, #fff 52%, #fff 100%);
+  color: #fff;
+  border-color: #0C447C;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* 深紫球 - 归档 */
+.dashboard a.internal-link[href*="88-Archive"] {
+  background: linear-gradient(180deg, #534AB7 0%, #534AB7 48%, #fff 48%, #fff 52%, #fff 100%);
+  color: #fff;
+  border-color: #26215C;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* 翠绿球 - 周回顾 */
+.dashboard a.internal-link[href*="30-Weekly"] {
+  background: linear-gradient(180deg, #1D9E75 0%, #1D9E75 48%, #fff 48%, #fff 52%, #fff 100%);
+  color: #fff;
+  border-color: #04342C;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* 暗色主题微调 */
+.theme-dark .dashboard a.internal-link {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
