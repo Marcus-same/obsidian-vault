@@ -14,12 +14,26 @@
     {
       "folder": "01-Daily",
       "template": "99-Meta/Templates/每日笔记.md"
+    },
+    {
+      "folder": "10-Wiki",
+      "template": "99-Meta/Templates/Wiki条目.md"
+    },
+    {
+      "folder": "20-Actions",
+      "template": "99-Meta/Templates/行动卡.md"
+    },
+    {
+      "folder": "30-Weekly",
+      "template": "99-Meta/Templates/周回顾.md"
     }
   ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": true,
   "enabled_templates_hotkeys": [
-    "99-Meta/Scripts/task-sort.js"
+    "99-Meta/Scripts/task-sort.js",
+    "99-Meta/Scripts/process-inbox.js",
+    "99-Meta/Scripts/create-action.js"
   ],
   "startup_templates": []
 }
