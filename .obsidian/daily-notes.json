@@ -1,4 +1,5 @@
 {
   "format": "YYYY-MM-DD",
-  "folder": "01-Daily"
+  "folder": "01-Daily",
+  "template": "99-Meta/Templates/每日笔记.md"
 }

@@ -23,8 +23,7 @@
     "node_modules/",
     ".obsidian/"
   ],
-  "openBehavior": "none",
-  "defaultViewForNewTabs": "🏠 工作台.md",
+  "openBehavior": "daily",
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "A4",
