@@ -12,10 +12,6 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "01-Daily",
-      "template": "99-Meta/Templates/每日笔记.md"
-    },
-    {
       "folder": "10-Wiki",
       "template": "99-Meta/Templates/Wiki条目.md"
     },
@@ -35,12 +31,9 @@
     "99-Meta/Scripts/process-inbox.js",
     "99-Meta/Scripts/create-action.js",
     "99-Meta/Scripts/quick-capture.js",
-    "99-Meta/Scripts/candidate-followup.js",
-    "99-Meta/Scripts/sync-actions.js"
+    "99-Meta/Scripts/candidate-followup.js"
   ],
-  "startup_templates": [
-    "99-Meta/Scripts/startup-check.js"
-  ],
+  "startup_templates": [],
   "intellisense_render": 1,
   "ignore_folders_on_creation": [
     {
